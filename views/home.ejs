@@ -1,0 +1,25 @@
+
+<%- include("partials/header"); -%>
+   <div class="bg-img">
+   <div class="home"><h4> <%= startingContent.substring(0,78) %><br><%= startingContent.substring(78) %></h4><br>
+  
+  </div>
+
+  <div class="main"><h2>Most Recent Blogs</h2></div>
+    
+
+
+  <%  posts.forEach(function(post){ %>
+    
+    <div class="note"><h3><%=post.title%></h3>
+    <p>
+    <%=post.content.substring(0,10) + "..."%>
+  <a href="/posts/<%=post._id%>">Read More</a></p>
+     </div> 
+     </div>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
