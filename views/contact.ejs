@@ -12,5 +12,5 @@
   ">Feedback</h1>
     <h3 style="color: rgb(255, 255, 255);  margin-top: 10px;
     margin-left:150px; font-family: cursive; font-size: 30px;"> <%= contactContent.substring(0,260)%>
-    <b style="color: rgb(0, 0, 0);"><%= contactContent.substring(260,268)%></b><%= contactContent.substring(268)%>  </h3>
+    <a href="/compose" style="text-decoration: none; color: rgb(0, 0, 0);"><b><%= contactContent.substring(260,268)%></b></a><%= contactContent.substring(268)%>  </h3>
 <%- include("partials/footer"); -%>
