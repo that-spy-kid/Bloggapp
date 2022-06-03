@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 
 
-mongoose.connect("mongodb://localhost:27017/blogDB");
+mongoose.connect("mongodb+srv://vinay123:vinay123@cluster0.vez5ig6.mongodb.net/blogDB?retryWrites=true&w=majority");
 
 const postSchema = {
   title: String,
@@ -82,6 +82,6 @@ app.get("/contact", function(req, res){
 
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
